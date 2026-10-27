@@ -1,0 +1,203 @@
+{
+  "contractAddress": "0x1cd836824def63b92abfb7603c290ff75777ff1f",
+  "network": "ARC-TESTNET",
+  "deployerWalletId": "3c2464b2-8369-52e2-a782-800bbeca5396",
+  "contract_code_path": "/home/user/app/contracts/SplitPay.sol",
+  "contract_compiled_code_path": "/home/user/app/contracts/out/SplitPay.sol/SplitPay.json",
+  "contract_network_and_links": {
+    "Arc Testnet": "https://explorer.testnet.arc.io/address/0x1cd836824def63b92abfb7603c290ff75777ff1f"
+  },
+  "contract_deployments": [
+    {
+      "chain": "Arc Testnet",
+      "address": "0x1cd836824def63b92abfb7603c290ff75777ff1f",
+      "explorerUrl": "https://explorer.testnet.arc.io/address/0x1cd836824def63b92abfb7603c290ff75777ff1f",
+      "txHash": "0xfcfd6407acde6dcf4041121dadb37935ae2dcc5c337cf14cc2a382778534515c",
+      "deployedAt": "2026-10-26T02:18:20.425Z"
+    }
+  ],
+  "abi": [
+    {
+      "type": "function",
+      "name": "split",
+      "inputs": [
+        {
+          "name": "usdcToken",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "recipients",
+          "type": "address[]",
+          "internalType": "address[]"
+        },
+        {
+          "name": "basisPoints",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        },
+        {
+          "name": "totalAmount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "Split",
+      "inputs": [
+        {
+          "name": "initiator",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "usdcToken",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "totalAmount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "recipients",
+          "type": "address[]",
+          "indexed": false,
+          "internalType": "address[]"
+        },
+        {
+          "name": "amounts",
+          "type": "uint256[]",
+          "indexed": false,
+          "internalType": "uint256[]"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "ArrayLengthMismatch",
+      "inputs": [
+        {
+          "name": "recipientsLength",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "basisPointsLength",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "BasisPointsSumMustBe10000",
+      "inputs": [
+        {
+          "name": "actualSum",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ERC20TransferFailed",
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "recipient",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ERC20TransferFromFailed",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidBasisPointsEntry",
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "value",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "InvalidRecipientCount",
+      "inputs": [
+        {
+          "name": "count",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "RecipientIsContract",
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ReentrancyGuardReentrantCall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ZeroRecipient",
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ZeroTokenAddress",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ZeroTotalAmount",
+      "inputs": []
+    }
+  ]
+}
